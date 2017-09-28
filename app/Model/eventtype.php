@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class eventtype extends Model
 {
-     protected $fillable =['type','status'];
+     protected $fillable =['type'];
 }

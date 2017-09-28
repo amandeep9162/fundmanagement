@@ -14,9 +14,7 @@
    {!!  Form::open(['route'=>'event.type', 'method'=>'post']) !!}
     {!! Form::label ('Type') !!}
    {!!Form::text('type',null,['class'=>'form-control']) !!}<br>
-    {!! Form::label ('Status') !!}
-   {!!Form::text('status',null,['class'=>'form-control']) !!}<br>
-    {!! Form::submit('click me',['class'=>'btn btn-primary'])  !!}
+       {!! Form::submit('click me',['class'=>'btn btn-primary'])  !!}
 
         </div>
         <div class="col-md-4">

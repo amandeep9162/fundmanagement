@@ -1,20 +1,17 @@
 <!DOCTYPE >
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-	<title>Events</title>
+	<title></title>
 </head>
 <body>
-       <div class="col-md-4">
-       </div>
-             <div class="col-md-4"> 
-                         <center><h2 style="color:red;font-weight:bold;">ADD EVENT</h2></center>
-                       {!!  Form::open(['route'=>'create.event', 'method'=>'post', 'files'=>'true']) !!}
+{!!  Form::model($edit,['route'=>'update.event', 'method'=>'post', 'files'=>'true']) !!}
+
+                       {!! Form::hidden('id') !!}
                        {!! Form::label ('Name') !!}
                        {!! Form::text('name',null,['class'=>'form-control'])  !!}<br>
                         {!! Form::label ('Title') !!}
                        {!! Form::text('title',null,['class'=>'form-control'])  !!}<br>
-                        {!! Form::label('select', 'Type', ['class' => 'control-label'] )  !!}
+                       {!! Form::label('select', 'Type', ['class' => 'control-label'] )  !!}
                        {!! Form::select('type',$data_type,null,['class'=>'form-control' ])  !!}<br>
                        {!! Form::label('Description' )  !!}
                        {!! Form::text('description',null,['class'=>'form-control'])  !!}<br>
@@ -34,23 +31,10 @@
                        {!! Form::number('amount',null,['class'=>'form-control'])  !!}<br>
                         {!! Form::label('User-Id' )  !!}
                         {!! Form::text('user_id',null,['class'=>'form-control'])  !!}<br>
-                        
                        {!! Form::submit('click me',['class'=>'btn btn-primary'])  !!}
 
                       
 
                        {!! Form::close() !!}
-             </div>       
-           <div class="col-md-4">
-
-         
-                 
-           </div>            
-
-
-
-
-
-
 </body>
 </html>
