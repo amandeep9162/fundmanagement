@@ -17,10 +17,9 @@
 
 </style>
 <body>
-       <div class="col-md-1">
-       </div>
+      
                
-           <div class="col-md-10">
+           <div class="col-md-12  row">
 
           <table class="table listingdata" >
   <tr >
@@ -37,7 +36,7 @@
     <th>Account</th>
     <th>User Id</th>
     <th>Status</th>
-     <th colspan="2"><center>Action</center></th>
+         <th colspan="2"><center>Action</center></th>
    
    
   </tr>
@@ -58,13 +57,20 @@
       <td>{{$val['account']}}</td>
       <td>{{$val['user_id']}}</td>
       <td>{{$val['status']}}</td>
-      <td><a href="{{route('edit',['id'=>$val['id']])}}"> Edit</a><a href="{{route('delete',['id'=>$val['id']])}}"> Delete</a></td>
-      <td><a href="{{route('enable',['id'=>$val['id']])}}"> Enable</a><a href="{{route('disable',['id'=>$val['id']])}}"> Disable</a></td>
+      <td>
+      
+      <a href="{{route('edit',['id'=>$val['id']])}}"> Edit</a><a href="{{route('delete',['id'=>$val['id']])}}"> Delete</a></td>
+      
+      
+      <td>
+       @if($val['status']==0)
+       <a href="{{route('event.enable',['id'=>$val['id']])}}"><button class="btn btn-info"> Enable</button></a>
+        @elseif($val['status']==1)
+      <a href="{{route('event.disable',['id'=>$val['id']])}}"><button class="btn btn-danger"> Disable</button></a></td>
       
      
 
-
-      
+ @endif     
 
     </tr>
   @endforeach
@@ -72,8 +78,7 @@
 </table>
                  
            </div>  
-            <div class="col-md-1"> 
-           </div>            
+                      
 
 
 
