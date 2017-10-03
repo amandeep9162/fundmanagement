@@ -1,10 +1,6 @@
-<!DOCTYPE >
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-	<title></title>
-</head>
-<body>
+@extends('layouts.mylayout');
+      
+              @section('content')
 
    <div class="col-md-2">
 
@@ -47,5 +43,4 @@
             <div class="col-md-2">
 
     </div>           
-</body>
-</html>
+@stop

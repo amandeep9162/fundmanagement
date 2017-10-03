@@ -1,22 +1,6 @@
-<!DOCTYPE >
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-	<title>Events</title>
-</head>
-<style type="text/css">
-  .listingdata tr td{
-
-    border:2px solid red;
-  }
-   .listingdata tr th{
-
-    border:2px solid red;
-  }
-
-
-</style>
-<body>
+@extends('layouts.mylayout');
+      
+              @section('content')
       
                
            <div class="col-md-12  row">
@@ -47,7 +31,8 @@
       <td>{{$val['id']}}</td>
       <td>{{$val['name']}}</td>
       <td>{{$val['title']}}</td>
-      <td>{{$val['type']}}</td>
+      <td>
+      {{$val['event_type_rel']['type']}}</td>
       <td>{{$val['description']}}</td>
       <td>{{$val['video']}}</td>
       <td>{{$val['images']}}</td>
@@ -84,6 +69,4 @@
 
 
 
-
-</body>
-</html>
+@stop

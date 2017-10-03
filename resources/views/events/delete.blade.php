@@ -1,9 +1,6 @@
-<!DOCTYPE >
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('layouts.mylayout');
+      
+              @section('content')
 {!!  Form::Model($delete,['route'=>'create.event', 'method'=>'post', 'files'=>'true']) !!}
                        {!! Form::label ('Name') !!}
                        {!! Form::text('name',null,['class'=>'form-control'])  !!}<br>
@@ -33,5 +30,4 @@
                       
 
                        {!! Form::close() !!}
-</body>
-</html>
+@stop

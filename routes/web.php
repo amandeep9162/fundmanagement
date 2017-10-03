@@ -35,3 +35,5 @@ Route::match(['get','post'], 'event/type', ['as'=>'event.type' , 'uses'=>'EtypeC
 Route::get('eventtype/delete/{id}', ['as'=>'etype.delete', 'uses'=>'EtypeController@delete']);
 Route::post('eventtype/update', ['as'=>'update.eventtype', 'uses'=>'EtypeController@update']);
 Route::get('eventtype/disable{id}', ['as'=>'etype.disable', 'uses'=>'EtypeController@disable']);
+
+Route::get('events/sidebar', ['as'=>'events.sidebar', 'uses'=>'EventController@sidebar']);

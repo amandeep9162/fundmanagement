@@ -1,7 +1,7 @@
 @extends('layouts.mylayout');
       
               @section('content')
-    <p>This is my body content.</p>
+   
 
            <div class="col-md-12  row">
  

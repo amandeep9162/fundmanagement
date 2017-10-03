@@ -40,7 +40,6 @@ class EtypeController extends Controller
 
       }
        public function edit($id) {
-             
                   $edit = eventtype::find($id);
                  
                  
@@ -57,20 +56,16 @@ class EtypeController extends Controller
             public function delete($id) {
                    eventtype::where('id',$id)->delete($id);
                    return back();
-
             }
 
             public function enable($id) {
-                   
                    eventtype::where('id',$id)->update(['status'=>1]);
                    return back();
 
             }
             public function disable($id) {
-                   
                    eventtype::where('id',$id)->update(['status'=>0]);
                    return back();
-
             }
 
 

@@ -11,7 +11,8 @@ class EventController extends Controller
 {
           public function listing() {
                    $data=null;
-                   $alldata=Event::all();
+                   $alldata=Event::with('event_type_rel')->get();
+                   dump($alldata->toArray());
                    return view('events.listing',['data'=>$alldata]);
         
 
@@ -79,6 +80,14 @@ class EventController extends Controller
                    return back();
 
             }
+
+            public function sidebar() {
+                   
+                   
+                   return view('events.sidebar');
+
+            }
+
 
 
 

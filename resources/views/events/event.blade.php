@@ -1,14 +1,9 @@
-<!DOCTYPE >
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
-	<title>Events</title>
-</head>
-<body>
+@extends('layouts.mylayout');
+      
+              @section('content')
 
 
-       <div class="col-md-4">
-       </div>
+       
              <div class="col-md-4">
              @if(Session::has('success'))
       <center> <p style="color:green; font-weight:bold;">{{Session::get('success')}}</p></center>
@@ -102,5 +97,4 @@
 
 
 
-</body>
-</html>
+@stop
