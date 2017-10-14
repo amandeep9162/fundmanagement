@@ -17,6 +17,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+
+
+Route::match(['get','post'], 'create/home', ['as'=>'create.event' , 'uses'=>'EventController@create']);
+
+
+
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::match(['get','post'], 'create/event', ['as'=>'create.event' , 'uses'=>'EventController@create']);

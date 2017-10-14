@@ -9,16 +9,22 @@ use Session;
 
 class EventController extends Controller
 {
+
+  public function __construct()
+    {
+        $this->middleware('auth');
+    }
           public function listing() {
                    $data=null;
                    $alldata=Event::with('event_type_rel')->get();
-                   dump($alldata->toArray());
+                   // dump($alldata->toArray());
                    return view('events.listing',['data'=>$alldata]);
         
 
          }
-          public function create(Request $request){
+        public function create(Request $request){
       	 
+        // return view('temp.home');
       		 // dump($request->all());
            	if($request->isMethod('post')){
 

@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class AddeventController extends Controller
 {
+
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     public function create(Request $request){
     	dump(1234);
 			dump($request->all());
