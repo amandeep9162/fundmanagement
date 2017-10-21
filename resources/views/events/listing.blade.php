@@ -6,13 +6,16 @@
     <!-- Section: home -->
    
     <!-- Section: featured project -->
+
     <section class="bg-lightest">
       <div class="container">
         <div class="row">
         <div class="col-sm-12 col-md-8 wow fadeInRight animation-delay6">
           <h4 class="text-uppercase line-bottom mt-0">Events</h4>
-            <div class="bxslider bx-nav-top">
-              <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
+           
+              @foreach($data as $key => $val)
+               <div class="bxslider bx-nav-top">
+                 <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
                 <div class="row">
                   <div class="col-md-6">
                   <h4 class="text-uppercase line-bottom mt-0"></h4>
@@ -57,8 +60,15 @@
             </div>
             </div> 
                 <div class="col-xs-6 p-0 pl-15">
+                <div class="event-content">
+                      <h5 class="media-heading text-uppercase"><a href="#">{{$val['title']}}</a></h5>
+                      <ul>
+                        <li><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm</li>
+                        <li> <i class="fa fa-map-marker"></i> 25 Newyork City.</li>
+                      </ul>                    
+                    </div>      
                   <div class="causes-details clearfix border-bottom p-15 pt-10">
-                  <p class="mb-10 mt-5"><span class="text-uppercase text-theme-colored"><strong>Charity Hospital:</strong></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium quos aspernatur cupiditate commodi sunt illo.</p>
+                  <p class="mb-10 mt-5"><span class="text-uppercase text-theme-colored"><strong>{{$val['description']}}</p>
                      <div class="donate-details">
                        <a class="btn btn-dark btn-theme-colored btn-flat btn-sm pull-left mt-10" href="#">Donate</a>
                        <ul class="pull-right list-inline mt-15">
@@ -67,13 +77,7 @@
                        </ul>
                      </div>
                   </div>
-                    <div class="event-content">
-                      <h5 class="media-heading text-uppercase"><a href="#">Gear up for giving</a></h5>
-                      <ul>
-                        <li><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm</li>
-                        <li> <i class="fa fa-map-marker"></i> 25 Newyork City.</li>
-                      </ul>                    
-                    </div>                
+                              
                   </div>
                   <div class="col-xs-3 pr-0">
                     <div class="event-date text-center">
@@ -85,112 +89,11 @@
                   </div>
                 </div>
               </div>
-              <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
-                <div class="row">
-                  <div class="col-xs-3 p-0">
-                    <div class="thumb pl-15">
-                      <img alt="..." src="{{asset('images/event/2.jpg')}}" class="media-object">
-                    </div>
-                  </div>
-                  <div class="col-xs-6 p-0 pl-15">
-                    <div class="event-content">
-                      <h5 class="media-heading text-uppercase"><a href="#">Gear up for giving</a></h5>
-                      <ul>
-                        <li><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm</li>
-                        <li> <i class="fa fa-map-marker"></i> 25 Newyork City.</li>
-                      </ul>                    
-                    </div>                
-                  </div>
-                  <div class="col-xs-3 pr-0">
-                    <div class="event-date text-center">
-                      <ul>
-                        <li class="font-36 text-theme-colored font-weight-700">28</li>
-                        <li class="font-20 text-center text-uppercase">Feb</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
-                <div class="row">
-                  <div class="col-xs-3 p-0">
-                    <div class="thumb pl-15">
-                      <img alt="..." src="{{asset('images/event/3.jpg')}}" class="media-object">
-                    </div>
-                  </div>
-                  <div class="col-xs-6 p-0 pl-15">
-                    <div class="event-content">
-                      <h5 class="media-heading text-uppercase"><a href="#">Gear up for giving</a></h5>
-                      <ul>
-                        <li><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm</li>
-                        <li> <i class="fa fa-map-marker"></i> 25 Newyork City.</li>
-                      </ul>                    
-                    </div>                
-                  </div>
-                  <div class="col-xs-3 pr-0">
-                    <div class="event-date text-center">
-                      <ul>
-                        <li class="font-36 text-theme-colored font-weight-700">28</li>
-                        <li class="font-20 text-center text-uppercase">Feb</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
-                <div class="row">
-                  <div class="col-xs-3 p-0">
-                    <div class="thumb pl-15">
-                      <img alt="..." src="{{asset('images/event/1.jpg')}}" class="media-object">
-                    </div>
-                  </div>
-                  <div class="col-xs-6 p-0 pl-15">
-                    <div class="event-content">
-                      <h5 class="media-heading text-uppercase"><a href="#">Gear up for giving</a></h5>
-                      <ul>
-                        <li><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm</li>
-                        <li> <i class="fa fa-map-marker"></i> 25 Newyork City.</li>
-                      </ul>                    
-                    </div>                
-                  </div>
-                  <div class="col-xs-3 pr-0">
-                    <div class="event-date text-center">
-                      <ul>
-                        <li class="font-36 text-theme-colored font-weight-700">28</li>
-                        <li class="font-20 text-center text-uppercase">Feb</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="event media sm-maxwidth400 p-15 mt-0 mb-15">
-                <div class="row">
-                  <div class="col-xs-3 p-0">
-                    <div class="thumb pl-15">
-                      <img alt="..." src="{{asset('images/event/2.jpg')}}" class="media-object">
-                    </div>
-                  </div>
-                  <div class="col-xs-6 p-0 pl-15">
-                    <div class="event-content">
-                      <h5 class="media-heading text-uppercase"><a href="#">Gear up for giving</a></h5>
-                      <ul>
-                        <li><i class="fa fa-clock-o"></i> at 5.00 pm - 7.30 pm</li>
-                        <li> <i class="fa fa-map-marker"></i> 25 Newyork City.</li>
-                      </ul>                    
-                    </div>                
-                  </div>
-                  <div class="col-xs-3 pr-0">
-                    <div class="event-date text-center">
-                      <ul>
-                        <li class="font-36 text-theme-colored font-weight-700">28</li>
-                        <li class="font-20 text-center text-uppercase">Feb</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                 </div>
+             @endforeach
+           
              
-            </div>
+           
           </div>
         
       

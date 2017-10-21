@@ -1,4 +1,22 @@
- <section id="home" class="divider">
+ 
+<style type="text/css"> .divider,
+.parallax {
+   
+  background-repeat: repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  
+} </style>
+ <section id="home" class="divider" style="width: 30%; height: 800px; float: right;">
       <div class="container-fluid p-0">
         
         <!-- Slider Revolution Start -->

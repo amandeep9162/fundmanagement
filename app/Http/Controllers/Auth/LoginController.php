@@ -25,6 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
+    protected $loginPath = '/abcccb';
     protected $redirectTo = '/create/event';
 
     /**
@@ -34,6 +35,11 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        echo 123453;
         $this->middleware('guest')->except('logout');
+    }
+
+    public function loginform(){
+        return view('login.login');
     }
 }

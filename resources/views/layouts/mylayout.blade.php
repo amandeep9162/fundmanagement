@@ -72,7 +72,7 @@
   <div class="side-panel-wrap">
     <div id="side-panel-trigger-close" class="side-panel-trigger2"><a href="#"><i class="icon_close font-30"></i></a></div>
     <a href="{{asset('javascript:void(0)')}}"><img alt="logo" src="{{asset('images/logo-wide.png')}}"></a>
-    <div class="side-panel-nav mt-30">
+    <div class="side-panel-nav mt-20">
       <div class="widget no-border">
         <nav>
           <ul class="nav nav-list">
@@ -117,21 +117,13 @@
   <div class="side-panel-wrap">
     <div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="icon_close font-30"></i></a></div>
     <a href="{{asset('javascript:void(0)')}}"><img alt="logo" src="{{asset('images/logo-wide.png')}}"></a>
-    <div class="side-panel-nav mt-30">
-      <div class="widget no-border">
-        <nav>
-          <ul class="nav nav-list">
-           
-    <section>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 ">
+   
             <ul class="nav nav-tabs">
               <li class="active"><a href="#login-tab" data-toggle="tab">Login</a></li>
               <li><a href="#register-tab" data-toggle="tab">Register</a></li>
             </ul>
-            <div class="tab-content">
-              <div class="tab-pane fade in active p-15" id="login-tab">
+            <div class="">
+              <div class="tab-pane fade in active " id="login-tab">
                 <h4 class="text-gray mt-0 pt-5"> Login</h4>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
@@ -176,11 +168,11 @@
                   <hr>
                   <p class="text-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi id perspiciatis facilis nulla possimus quasi, amet qui. Ea rerum officia, aspernatur nulla neque nesciunt alias.</p>
                   <div class="row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-12">
                       <label for="form_name">Name</label>
                       <input id="form_name" name="form_name" class="form-control" type="text">
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-12">
                       <label>Email Address</label>
                       <input id="form_email" name="form_email" class="form-control" type="email">
                     </div>
@@ -207,17 +199,7 @@
                 </form>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-              </ul>
-            </li>
-           
-          </ul>
-        </nav>        
-      </div>
-    </div>
+          
     <div class="clearfix"></div>
     <div class="side-panel-widget mt-30">
       <div class="widget no-border">
@@ -318,7 +300,7 @@
         <div class="container">
           <nav id="menuzord" class="menuzord orange bg-light">
             <ul class="menuzord-menu">
-              <li class="active"><a href="#home">Home</a>
+              <li class="active"><a href="{{route('events.listing')}}">Home</a>
                 <ul class="dropdown">
                   <li><a href="#">Multipage Layout</a>
                   
@@ -376,25 +358,11 @@
                                       </ul>
                   
               </li>
-              <li><a href="#">Pages</a>
+              <li><a href="#">About Us</a>
                 <ul class="dropdown">
                   <li><a href="page-become-a-volunteer.html">Become a Volunteer</a></li>
-                  <li><a href="#">Shop <span class="label label-success">New</span></a>
-                    <ul class="dropdown">
-                      <li><a href="shop-category.html">Category</a></li>
-                      <li><a href="shop-category-sidebar.html">Category Sidebar</a></li>
-                      <li><a href="shop-product-details.html">Product Details</a></li>
-                      <li><a href="shop-cart.html">Cart</a></li>
-                      <li><a href="shop-checkout.html">Checkout</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">About</a>
-                    <ul class="dropdown">
-                      <li><a href="page-about1.html">About Style1</a></li>
-                      <li><a href="page-about2.html">About Style2</a></li>
-                      <li><a href="page-about3.html">About Style3</a></li>
-                    </ul>
-                  </li>
+                    <li><a href="{{route('events.aboutus')}}">About</a>
+                     </li>
                   <li><a href="#">Services</a>
                     <ul class="dropdown">
                       <li><a href="page-services1.html">Services Style1</a></li>
@@ -416,111 +384,7 @@
                       <li><a href="page-gallery-prettyphoto.html">Pretty Photo Gallery</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">FAQ</a>
-                    <ul class="dropdown">
-                      <li><a href="page-faq-style1.html">FAQ Style1</a></li>
-                      <li><a href="page-faq-style2.html">FAQ Style2</a></li>
-                      <li><a href="page-faq-style3.html">FAQ Style3</a></li>
-                      <li><a href="page-faq-style4.html">FAQ Style4</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Contact</a>
-                    <ul class="dropdown">
-                      <li><a href="page-contact1.html">Contact Style1</a></li>
-                      <li><a href="page-contact2.html">Contact Style2</a></li>
-                      <li><a href="page-contact3.html">Contact Style3</a></li>
-                      <li><a href="page-contact4.html">Contact Style4</a></li>
-                      <li><a href="page-contact5-with-multiple-marker.html">Contact 5 - Multiple Marker</a></li>
-                      <li><a href="page-contact6-with-multiple-marker.html">Contact 6 - Multiple Marker</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Calender</a>
-                    <ul class="dropdown">
-                      <li><a href="page-calender1.html">Calender Style1</a></li>
-                      <li><a href="page-calender2.html">Calender Style2</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Events</a>
-                    <ul class="dropdown">
-                      <li><a href="#">Events Calendar</a>
-                        <ul class="dropdown">
-                          <li><a href="events-calendar-style1.html">Calendar Style1</a></li>
-                          <li><a href="events-calendar-style2.html">Calendar Style1</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Events Grid</a>
-                        <ul class="dropdown">
-                          <li><a href="events-grid-2column.html">Grid 2column</a></li>
-                          <li><a href="events-grid-3column.html">Grid 3column</a></li>
-                          <li><a href="events-grid-4column.html">Grid 4column</a></li>
-                          <li><a href="events-grid-left-sidebar.html">Grid Left Sidebar</a></li>
-                          <li><a href="events-grid-right-sidebar.html">Grid Right Sidebar</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Events List</a>
-                        <ul class="dropdown">
-                          <li><a href="events-list-left-sidebar.html">List Left Sidebar</a></li>
-                          <li><a href="events-list-right-sidebar.html">List Right Sidebar</a></li>
-                          <li><a href="events-list-no-sidebar.html">List No Sidebar</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Events Details</a>
-                        <ul class="dropdown">
-                          <li><a href="events-details-style1.html">Details Style1</a></li>
-                          <li><a href="events-details-style2.html">Details Style2</a></li>
-                          <li><a href="events-details-style3.html">Details Style3</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="events-table.html">Events Table</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Causes</a>
-                    <ul class="dropdown">
-                      <li><a href="page-cause-list.html">Cause List</a></li>
-                      <li><a href="page-cause-grid.html">Cause Grid</a></li>
-                      <li><a href="page-cause-details.html">Cause Details</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Job <span class="label label-success">New</span></a>
-                    <ul class="dropdown">
-                      <li><a href="job-list.html">Job List</a></li>
-                      <li><a href="job-details-style1.html">Job Details Style1</a></li>
-                      <li><a href="job-details-style2.html">Job Details Style2</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Pricing</a>
-                    <ul class="dropdown">
-                      <li><a href="page-pricing1.html">Pricing Style1</a></li>
-                      <li><a href="page-pricing2.html">Pricing Style2</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="page-about4.html">Page with Sidebar</a>
-                    <ul class="dropdown">
-                      <li><a href="page-sidebar-right.html">Page Right Sidebar</a></li>
-                      <li><a href="page-sidebar-left.html">Page Left Sidebar</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Page 404</a>
-                    <ul class="dropdown">
-                      <li><a href="page-404-style1.html">Style1</a></li>
-                      <li><a href="page-404-style2.html">Style2</a></li>
-                      <li><a href="page-404-style3.html">Style3</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Under Construction</a>
-                    <ul class="dropdown">
-                      <li><a href="page-under-construction-style1.html">Style1</a></li>
-                      <li><a href="page-under-construction-style2.html">Style2</a></li>
-                      <li><a href="page-under-construction-style3.html">Style3</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Coming Soon</a>
-                    <ul class="dropdown">
-                      <li><a href="page-coming-soon-style1.html">Style1</a></li>
-                      <li><a href="page-coming-soon-style2.html">Style2</a></li>
-                      <li><a href="page-coming-soon-style3.html">Style3</a></li>
-                    </ul>
-                  </li>
+                 
                 </ul>
               </li>
               <li><a href="#">Portfolio<span class="label label-warning">New</span></a>

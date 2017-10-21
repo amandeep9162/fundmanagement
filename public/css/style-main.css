@@ -4743,7 +4743,20 @@ blockquote p {
 */
 .divider,
 .parallax {
-  background-repeat: repeat;
+   background-repeat: repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /*background-repeat: repeat;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -4757,7 +4770,7 @@ blockquote p {
   overflow: hidden;
   width: 30%;
   height: 800px;
-  float: right;
+  float: right;*/
 }
 /* -------- Parallax ---------- */
 .parallax {
@@ -4773,7 +4786,7 @@ blockquote p {
 .divider .container {
   padding-top: 60px;
   padding-bottom: 60px;
-  height: 800px;
+  height: 300px;
 }
 .divider .container.small-padding {
   padding-top: 30px;

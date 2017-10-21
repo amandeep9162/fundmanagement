@@ -6,14 +6,11 @@ use Illuminate\Http\Request;
 use App\Model\Event;
 use App\Model\eventtype;
 use Session;
-
+use Auth;
 class EventController extends Controller
 {
 
-  public function __construct()
-    {
-        $this->middleware('auth');
-    }
+ 
           public function listing() {
                    $data=null;
                    $alldata=Event::with('event_type_rel')->get();
@@ -22,10 +19,17 @@ class EventController extends Controller
         
 
          }
+                  public function __construct()
+    {
+        // $this->middleware('auth');
+    }
         public function create(Request $request){
-      	 
+
         // return view('temp.home');
       		 // dump($request->all());
+          // dd(Auth::check());
+
+          if(Auth::check()){
            	if($request->isMethod('post')){
 
 
@@ -48,9 +52,12 @@ class EventController extends Controller
                   return back(); 
           		
           	}
+
                  $type_data = eventtype::pluck('type','id');
           	     return view('events.event',['data_type'=>$type_data]);
-
+                 }else{
+                return redirect('/login');
+              }
             }
 
             public function edit($id) {

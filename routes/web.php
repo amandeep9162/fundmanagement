@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
+Route::get('mylogin',['uses'=>'Auth\LoginController@loginform']);
 
 
 Route::match(['get','post'], 'create/home', ['as'=>'create.event' , 'uses'=>'EventController@create']);
@@ -47,3 +47,6 @@ Route::post('eventtype/update', ['as'=>'update.eventtype', 'uses'=>'EtypeControl
 Route::get('eventtype/disable{id}', ['as'=>'etype.disable', 'uses'=>'EtypeController@disable']);
 
 Route::get('events/sidebar', ['as'=>'events.sidebar', 'uses'=>'EventController@sidebar']);
+
+
+Route::get('events/aboutus', ['as'=>'events.aboutus', 'uses'=>'AboutcontactController@aboutus']);
